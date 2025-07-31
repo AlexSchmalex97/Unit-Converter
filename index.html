@@ -1,11 +1,29 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Unit Converter</title>
-    </head>
-    <body>
-        <h1>Unit Converter</h1>
-        <p id="resultElement">Result will be displayed here</p>
-        <script src="script.js"></script>
-    </body>
+  <head>
+    <title>Unit Converter</title>
+  </head>
+  <body>
+    <h1>Unit Converter</h1>
+
+    <!-- Input for number -->
+    <input type="number" id="inputValue" placeholder="Enter a number" />
+
+    <!-- Radio buttons for conversion direction -->
+    <div>
+      <input type="radio" id="milesToKm" name="conversion" value="milesToKm" checked />
+      <label for="milesToKm">Miles to Kilometers</label>
+
+      <input type="radio" id="kmToMiles" name="conversion" value="kmToMiles" />
+      <label for="kmToMiles">Kilometers to Miles</label>
+    </div>
+
+    <!-- Button to trigger calculation -->
+    <button onclick="convert()">Convert</button>
+
+    <!-- Result display -->
+    <p id="resultElement">Result will appear here</p>
+
+    <script src="script.js"></script>
+  </body>
 </html>
