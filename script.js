@@ -1,25 +1,25 @@
 function convert() {
-  const input = document.getElementById("numberInput").value;
-  const kmToMiles = document.getElementById("kmToMiles").checked;
-  const resultDiv = document.getElementById("result");
+  const inputValue = document.getElementById("inputValue").value;
+  const conversionType = document.querySelector('input[name="conversion"]:checked').value;
+  const resultElement = document.getElementById("resultElement");
 
-  const number = parseFloat(input);
+  const number = parseFloat(inputValue);
 
   if (isNaN(number)) {
-    resultDiv.textContent = "Please enter a valid number.";
+    resultElement.textContent = "❌ Please enter a valid number.";
     return;
   }
 
   let result;
-  let conversionText;
+  let message;
 
-  if (kmToMiles) {
-    result = number * 0.621371;
-    conversionText = `${number} kilometers is ${result.toFixed(2)} miles.`;
+  if (conversionType === "milesToKm") {
+    result = number * 1.60934;
+    message = `${number} miles = ${result.toFixed(2)} kilometers`;
   } else {
-    result = number / 0.621371;
-    conversionText = `${number} miles is ${result.toFixed(2)} kilometers.`;
+    result = number / 1.60934;
+    message = `${number} kilometers = ${result.toFixed(2)} miles`;
   }
 
-  resultDiv.textContent = conversionText;
+  resultElement.textContent = message;
 }
