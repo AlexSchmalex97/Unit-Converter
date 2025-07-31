@@ -1,8 +1,12 @@
-📏 Unit Converter — Beginner JavaScript Project
-This project is part of my ongoing journey to become a software engineer. I created this unit converter to practice working with DOM manipulation, event listeners, and conditional logic using JavaScript.
+📏 Unit Converter — My First JavaScript Project
+This is a simple unit converter that converts miles to kilometers and vice versa.
+I built it early in my journey learning JavaScript to practice basic concepts like
+working with the web page using DOM manipulation, handling user input, and
+responding to events.
 
-I leaned on ChatGPT for support while building this — not for copy/pasting blindly, but to help me understand how things work, why they're written a certain way, and how to structure responsive, functional code. Every time I added or changed something, I made sure to pause, experiment, and learn from it.
+I used ChatGPT to help explain and guide me through parts of the code, which
+helped me understand how JavaScript interacts with web pages. The design is
+inspired by a calculator layout, and I’m excited to keep improving it as I learn more.
 
-The calculator-style layout was a fun design choice that I plan to iterate on as I grow more confident with CSS and UI design principles.
-
-This may be a small project, but it represents a big milestone: building something functional from start to finish, asking for help when needed, and continuing to move forward.
+This project represents an important step in my growth as a programmer—building
+something real while learning and asking for help.
