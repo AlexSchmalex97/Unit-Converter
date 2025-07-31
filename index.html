@@ -1,29 +1,25 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Unit Converter</title>
-  </head>
-  <body>
-    <h1>Unit Converter</h1>
+function convert() {
+  const inputValue = document.getElementById("inputValue").value;
+  const milesToKm = document.getElementById("milesToKm").checked;
+  const resultElement = document.getElementById("resultElement");
 
-    <!-- Input for number -->
-    <input type="number" id="inputValue" placeholder="Enter a number" />
+  const number = parseFloat(inputValue);
 
-    <!-- Radio buttons for conversion direction -->
-    <div>
-      <input type="radio" id="milesToKm" name="conversion" value="milesToKm" checked />
-      <label for="milesToKm">Miles to Kilometers</label>
+  if (isNaN(number)) {
+    resultElement.textContent = "❌ Please enter a valid number.";
+    return;
+  }
 
-      <input type="radio" id="kmToMiles" name="conversion" value="kmToMiles" />
-      <label for="kmToMiles">Kilometers to Miles</label>
-    </div>
+  let result;
+  let message;
 
-    <!-- Button to trigger calculation -->
-    <button onclick="convert()">Convert</button>
+  if (milesToKm) {
+    result = number * 1.60934;
+    message = `${number} miles is ${result.toFixed(2)} kilometers.`;
+  } else {
+    result = number / 1.60934;
+    message = `${number} kilometers is ${result.toFixed(2)} miles.`;
+  }
 
-    <!-- Result display -->
-    <p id="resultElement">Result will appear here</p>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+  resultElement.textContent = message;
+}
