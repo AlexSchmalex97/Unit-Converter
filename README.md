@@ -1,4 +1,4 @@
-📏 Unit Converter — My First JavaScript Project
+📏 Unit Converter 
 This is a simple unit converter that converts miles to kilometers and vice versa.
 I built it early in my journey learning JavaScript to practice basic concepts like
 working with the web page using DOM manipulation, handling user input, and
